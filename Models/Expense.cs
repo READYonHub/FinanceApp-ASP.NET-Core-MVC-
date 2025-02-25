@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+using System.ComponentModel.DataAnnotations;
 
 namespace FinanceApp.Models
 {
@@ -8,11 +9,10 @@ namespace FinanceApp.Models
         [Required]
         public string Description { get; set; } = null!;
         [Required]
-        public double Amount{ get; set; }
+        [Range(0.01, double.MaxValue, ErrorMessage = "Amount needs to be higher than 0")]
+        public double Amount { get; set; }
         [Required]
-        [Range(0.01, double.MaxValue, ErrorMessage ="Az összegnek többnek kell lennie 0-nál!")]
         public string Category { get; set; } = null!;
         public DateTime Date { get; set; } = DateTime.Now;
-
     }
 }
