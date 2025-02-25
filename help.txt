@@ -1,0 +1,9 @@
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Tools
+
+ha kész van a model, akkor migráció
+
+nuget terminla:
+Add-Migration "initial migration"
+Update-Database
